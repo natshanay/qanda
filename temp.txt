@@ -1,0 +1,57 @@
+brain storm
+what do we need 
+1. user table 
+2. on my website 
+3 . what information do i need 
+table
+db users what are my informations 
+
+
+DB User
+0 uid int 
+1 firtname varchar
+2 full name  avrchar
+3 email  varchar
+4 password varachar
+5 joinedDate datea
+6 uhash varachar
+
+DB Topics
+
+tid int
+topname varchar
+
+
+a way to ask a questoin the q into db
+DB questoin'
+tid 
+uid
+
+fields ... 
+date 
+explanations 
+then asked date 
+asked date
+DB ANSWER 
+asing date
+
+we want to save those things 
+if this is the question.
+
+DB ANSWER
+asn
+ck editor ? 
+
+
+
+
+
+
+
+
+
+fdb122e7c906013a9bc0cb02c436fa8a
+fdb122e7c906013a9bc0cb02c436fa8a
+
+a0c45c5330cc1b5f0dedd6cf6a159597
+a0c45c5330cc1b5f0dedd6cf6a159597
