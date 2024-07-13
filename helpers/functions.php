@@ -14,8 +14,9 @@ function registerUser($fname, $lname, $email, $password){
     $fname = cleanUp($fname);
     $lname = cleanUp($lname);
     $email = cleanUp($email);
+
     // Use password_hash instead of md5 for security
-    $password = password_hash($password, PASSWORD_DEFAULT);
+    $password = password_hash($password);
     $joined_date = date("Y-m-d H:i:s");
     $uHash = md5($email);
 
@@ -40,6 +41,7 @@ function registerUser($fname, $lname, $email, $password){
     }
 
     // Close the statement
+
     mysqli_stmt_close($stmt);
 }
 
@@ -48,16 +50,13 @@ function registerUser($fname, $lname, $email, $password){
 function loginUser($email, $password){
     global $sqlConnect;
     $email = cleanUp($email);
-    $password = password_hash($password, PASSWORD_DEFAULT);
+    $password = md5($password);
 
+    
     $fetched_data = array();
-
-
-
     $query_text = "SELECT * FROM Users WHERE 
     email = '$email' AND pass = '$password'
     ";
-    
     $query = mysqli_query($sqlConnect,$query_text);
     
     if($query){
@@ -67,9 +66,6 @@ function loginUser($email, $password){
     }
 
     return $fetched_data;
-
-
-    // $loggedInUser = loginUser($email, $password);
 
 }
 

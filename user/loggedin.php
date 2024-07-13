@@ -2,7 +2,6 @@
 
 require_once("../helpers/init.php");
 
-
 print "<pre>";
 print_r($_POST);
 
@@ -24,11 +23,9 @@ if(!empty($email) && !empty($password)){
     $loggedinUser = loginUser($email, $password);
 
 }
-
-if(!empty($loggedinUser)){
-    echo "NOT Logged in";
+if(empty($loggedinUser)){
+    echo "Not logged in";
 }
 else{
     print_r($loggedinUser);
-
 }
